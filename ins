@@ -1,0 +1,14 @@
+#!/bin/bash
+sudo haveged -w 1024
+sudo pacman-key --init && sudo pacman-key --populate arch linux
+sudo pkill haveged
+
+#gnomex packages
+sudo pacman -S gnome-shell gnome-shell-extensions gnome-control-center gnome-backgrounds gnome-tweak-tool thunar thunar-volman gvfs thunar-archive-plugin garcon tumbler ristretto xfce4-terminal leafpad mate-system-monitor ncdu
+
+#Network Services
+sudo systemctl enable NetworkManager
+
+#Enable the shell
+touch .xinitrc
+echo "exec gnome-session" > .xinitrc
