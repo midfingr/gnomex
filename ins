@@ -6,11 +6,14 @@ sudo pacman -Syy
 sudo pkill haveged
 
 #gnomex packages
-sudo pacman -S gnome-shell gnome-shell-extensions gnome-control-center gnome-backgrounds gnome-tweak-tool thunar thunar-volman gvfs thunar-archive-plugin garcon tumbler ristretto xfce4-terminal leafpad mate-system-monitor ncdu parcellite xdg-user-dirs
+sudo pacman -S gnome-keyring gksu gnome-shell gnome-shell-extensions gnome-control-center gnome-backgrounds gnome-tweak-tool thunar thunar-volman gvfs thunar-archive-plugin garcon tumbler ristretto xfce4-terminal leafpad mate-system-monitor ncdu parcellite xdg-user-dirs
 
 #Network Services
 sudo systemctl enable NetworkManager
 
-#Enable the shell
+#User folders
+xdg-user-dirs-update
+
+#Enable shell login
 touch .xinitrc
 echo "exec gnome-session" > .xinitrc
