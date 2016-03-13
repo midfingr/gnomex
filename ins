@@ -1,6 +1,8 @@
 #!/bin/bash
+sudo pacman -S haveged
 sudo haveged -w 1024
 sudo pacman-key --init && sudo pacman-key --populate arch linux
+sudo pacman -Syy
 sudo pkill haveged
 
 #gnomex packages
