@@ -6,7 +6,7 @@ sudo pacman -Syy
 sudo pkill haveged
 
 #gnomex packages
-sudo pacman -S epiphany gnome-keyring gksu gnome-shell gnome-shell-extensions gnome-control-center gnome-backgrounds gnome-tweak-tool thunar thunar-volman gvfs thunar-archive-plugin garcon tumbler ristretto xfce4-terminal leafpad mate-system-monitor ncdu parcellite xdg-user-dirs unrar unzip p7zip
+sudo pacman -S epiphany numix-themes mate-icon-theme-faenza gnome-keyring gksu gnome-shell gnome-shell-extensions gnome-control-center gnome-backgrounds gnome-tweak-tool thunar thunar-volman gvfs thunar-archive-plugin garcon tumbler ristretto xfce4-terminal leafpad mate-system-monitor ncdu parcellite xdg-user-dirs unrar unzip p7zip
 
 #Network Services
 sudo systemctl enable NetworkManager
@@ -21,3 +21,6 @@ echo "exec gnome-session" > .xinitrc
 #AUR Install
 chmod +x gnomex/aur_ins
 gnomex/aur_ins
+
+gsettings set org.gnome.desktop.interface gtk-theme Numix
+gsettings set org.gnome.desktop.interface icon-theme matefaenzadark
