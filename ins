@@ -18,8 +18,8 @@ xdg-user-dirs-update
 sudo systemctl enable lightdm
 
 #Copy configuration files
-cp -r gnomex/.config ~/.config
-cp -r gnomex/.local ~/.local
+cp -r gnomex/.config/* ~/.config
+cp -r gnomex/.local/* ~/.local
 
 #AUR Install
 chmod +x gnomex/aur_ins
