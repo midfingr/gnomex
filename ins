@@ -22,6 +22,7 @@ echo "exec gnome-session" > .xinitrc
 chmod +x gnomex/aur_ins
 gnomex/aur_ins
 
+gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
 gsettings set org.gnome.desktop.interface gtk-theme Numix
 gsettings set org.gnome.desktop.interface icon-theme matefaenzadark
 gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/gnome/Stones.jpg'
