@@ -14,9 +14,12 @@ sudo systemctl enable NetworkManager
 #User folders
 xdg-user-dirs-update
 
-#Enable shell login
-touch .xinitrc
-echo "exec gnome-session" > .xinitrc
+#Enable Login Manager
+sudo systemctl enable lightdm
+
+#Copy configuration files
+cp -r gnomex/.config ~/.config
+cp -r gnomex/.local ~/.local
 
 #AUR Install
 chmod +x gnomex/aur_ins
